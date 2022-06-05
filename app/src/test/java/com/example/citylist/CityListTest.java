@@ -97,9 +97,9 @@ public class CityListTest {
     @Test
     public void testSort() {
         CityList cityList = new CityList();
-        City city1 = new City("Gazipur", "Rajshahi");
+        City city1 = new City("A", "Y");
         cityList.add(city1);
-        City city2 = new City("Mongla", "Khulna");
+        City city2 = new City("B", "X");
         cityList.add(city2);
         assertEquals(city1, cityList.getCities(true).get(0));
         assertEquals(city2, cityList.getCities(false).get(0));

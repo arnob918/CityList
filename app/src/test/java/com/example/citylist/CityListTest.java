@@ -56,7 +56,7 @@ public class CityListTest {
     @Test
     public void testDelete() {
         CityList citylist = new CityList();
-        City city = new City("Dhaka", "Dhaka");
+        City city = new City("A", "B");
         citylist.add(city);
         citylist.delete(city);
         assertEquals(false, citylist.getCities().contains(city));
@@ -68,7 +68,7 @@ public class CityListTest {
     @Test
     public void testDeleteException() {
         CityList cityList = new CityList();
-        City city = new City("Dhaka", "Dhaka");
+        City city = new City("X", "Y");
         assertThrows(IllegalArgumentException.class, () -> {
             cityList.delete(city);
         });
@@ -81,10 +81,10 @@ public class CityListTest {
     public void testCount() {
         CityList cityList = new CityList();
         assertEquals(0, cityList.count());
-        City city1 = new City("Dhaka", "Dhaka");
+        City city1 = new City("A", "Y");
         cityList.add(city1);
         assertEquals(1, cityList.count());
-        City city2 = new City("Khulna", "Khulna");
+        City city2 = new City("B", "X");
         cityList.add(city2);
         assertEquals(2, cityList.count());
         cityList.delete(city1);
